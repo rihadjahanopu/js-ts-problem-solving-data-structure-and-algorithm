@@ -1,0 +1,320 @@
+/* ===============================
+   1. Math & Numeric Functions
+================================ */
+
+/* calc */
+.box {
+	width: calc(100% - 40px);
+}
+
+/* min / max */
+.box {
+	width: min(600px, 100%);
+	height: max(300px, 50vh);
+}
+
+/* clamp */
+.text {
+	font-size: clamp(14px, 2vw, 20px);
+}
+
+/* round / mod / rem */
+.demo {
+	width: round(33.6px); /* 34px */
+	margin-left: mod(10px, 3px); /* 1px */
+	margin-right: rem(10px, 3px);
+}
+
+/* abs / sign */
+.test {
+	margin-top: abs(-20px); /* 20px */
+	opacity: sign(-1); /* -1 */
+}
+
+/* ===============================
+   2. Color Functions
+================================ */
+
+.color1 {
+	color: rgb(255, 0, 0);
+}
+.color2 {
+	color: rgba(0, 0, 0, 0.5);
+}
+.color3 {
+	color: hsl(120, 100%, 50%);
+}
+.color4 {
+	color: hsla(200, 100%, 50%, 0.7);
+}
+.color5 {
+	color: hwb(0 0% 0%);
+}
+
+/* Modern color spaces */
+.color6 {
+	color: lab(60% 40 20);
+}
+.color7 {
+	color: lch(60% 40 20);
+}
+.color8 {
+	color: oklab(0.7 0.15 0.1);
+}
+.color9 {
+	color: oklch(65% 0.2 30);
+}
+
+.color10 {
+	background: color(display-p3 1 0 0);
+}
+
+.color11 {
+	background: color-mix(in srgb, red 50%, blue);
+}
+
+/* Legacy */
+.print {
+	color: device-cmyk(0 1 1 0);
+}
+
+/* ===============================
+   3. Gradient Functions
+================================ */
+
+.bg1 {
+	background: linear-gradient(to right, red, blue);
+}
+
+.bg2 {
+	background: radial-gradient(circle, red, blue);
+}
+
+.bg3 {
+	background: conic-gradient(red, yellow, green);
+}
+
+.bg4 {
+	background: repeating-linear-gradient(red 0 10px, blue 10px 20px);
+}
+
+/* ===============================
+   4. Transform Functions
+================================ */
+
+.transform1 {
+	transform: translate(50px);
+}
+
+.transform2 {
+	transform: translateX(20px) translateY(10px);
+}
+
+.transform3 {
+	transform: translate3d(20px, 20px, 50px);
+}
+
+.transform4 {
+	transform: scale(1.2);
+}
+
+.transform5 {
+	transform: rotate(45deg);
+}
+
+.transform6 {
+	transform: rotateX(45deg) rotateY(30deg);
+}
+
+.transform7 {
+	transform: rotate3d(1, 1, 0, 45deg);
+}
+
+.transform8 {
+	transform: skewX(20deg);
+}
+
+.transform9 {
+	transform: perspective(500px) rotateY(45deg);
+}
+
+/* ===============================
+   5. Filter & Visual Effects
+================================ */
+
+.filter1 {
+	filter: blur(5px);
+}
+.filter2 {
+	filter: brightness(120%);
+}
+.filter3 {
+	filter: contrast(150%);
+}
+.filter4 {
+	filter: grayscale(100%);
+}
+.filter5 {
+	filter: invert(100%);
+}
+.filter6 {
+	filter: opacity(50%);
+}
+.filter7 {
+	filter: saturate(200%);
+}
+.filter8 {
+	filter: sepia(100%);
+}
+.filter9 {
+	filter: drop-shadow(5px 5px 10px black);
+}
+
+/* ===============================
+   6. Image & Resource Functions
+================================ */
+
+.img1 {
+	background-image: url("image.jpg");
+}
+
+.img2 {
+	background-image: image("image.jpg");
+}
+
+.img3 {
+	background-image: image-set("img-1x.jpg" 1x, "img-2x.jpg" 2x);
+}
+
+.img4 {
+	background-image: cross-fade(50%, red, blue);
+}
+
+.img5 {
+	background-image: element(#logo);
+}
+
+/* ===============================
+   7. Shape & Layout Functions
+================================ */
+
+.shape1 {
+	clip-path: inset(10px);
+}
+
+.shape2 {
+	clip-path: circle(50%);
+}
+
+.shape3 {
+	clip-path: ellipse(50% 30%);
+}
+
+.shape4 {
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.shape5 {
+	clip-path: path("M10 10 H 90 V 90 H 10 Z");
+}
+
+.shape6 {
+	clip-path: rect(0 100px 100px 0);
+}
+
+.shape7 {
+	clip-path: xywh(10px 10px 100px 100px);
+}
+
+/* ===============================
+   8. Timing & Animation
+================================ */
+
+.anim1 {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anim2 {
+	animation-timing-function: steps(5);
+}
+
+.anim3 {
+	animation-timing-function: linear();
+}
+
+/* ===============================
+   9. Counter & Content Functions
+================================ */
+
+.item::before {
+	content: attr(data-title);
+}
+
+.step::before {
+	content: counter(step);
+}
+
+.list::before {
+	content: counters(section, ".");
+}
+
+.symbol::before {
+	content: symbols(cyclic "*" "•" "◦");
+}
+
+/* ===============================
+   10. Font & Typography
+================================ */
+
+:root {
+	--size: 18px;
+}
+
+.text {
+	font-size: var(--size);
+}
+
+.safe {
+	padding-top: env(safe-area-inset-top);
+}
+
+.font1 {
+	font-feature-settings: "liga" on;
+}
+
+.font2 {
+	font-variation-settings: "wght" 700;
+}
+
+.font3 {
+	font-palette: normal;
+}
+
+@font-face {
+	font-family: "MyFont";
+	src:
+		local("Arial"),
+		url("font.woff2") format("woff2");
+}
+
+/* ===============================
+   11. Media & Container Queries
+================================ */
+
+@media (min-width: 768px) {
+	body {
+		background: lightgray;
+	}
+}
+
+@media (orientation: landscape) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@container (min-width: 400px) {
+	.card {
+		padding: 20px;
+	}
+}

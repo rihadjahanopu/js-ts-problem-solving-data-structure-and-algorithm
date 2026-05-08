@@ -1,0 +1,292 @@
+/* ===============================
+1. User Interaction (Dynamic)
+=============================== */
+
+:hover {
+	cursor: pointer;
+}
+
+:active {
+	transform: scale(0.97);
+}
+
+:focus {
+	outline: 2px solid blue;
+}
+
+:focus-visible {
+	outline: 2px solid red;
+}
+
+:focus-within {
+	box-shadow: 0 0 0 2px #ccc;
+}
+
+:any-link {
+	color: purple;
+}
+
+:link {
+	color: blue;
+}
+
+:visited {
+	color: gray;
+}
+
+/* ===============================
+2. Form & Input State
+=============================== */
+
+:enabled {
+	opacity: 1;
+}
+
+:disabled {
+	opacity: 0.5;
+}
+
+:read-only {
+	background: #eee;
+}
+
+:read-write {
+	background: #fff;
+}
+
+:required {
+	border-color: red;
+}
+
+:optional {
+	border-color: gray;
+}
+
+:checked {
+	accent-color: green;
+}
+
+:indeterminate {
+	accent-color: orange;
+}
+
+:default {
+	font-weight: bold;
+}
+
+:valid {
+	border-color: green;
+}
+
+:invalid {
+	border-color: red;
+}
+
+:in-range {
+	background: #d4ffd4;
+}
+
+:out-of-range {
+	background: #ffd4d4;
+}
+
+:placeholder-shown {
+	border-style: dashed;
+}
+
+:autofill {
+	background: yellow;
+}
+
+:user-invalid {
+	outline: 2px solid red;
+}
+
+/* ===============================
+3. Structural / Document Tree
+=============================== */
+
+:root {
+	--main-color: #0066ff;
+}
+
+:empty {
+	display: none;
+}
+
+:first-child {
+	margin-top: 0;
+}
+
+:last-child {
+	margin-bottom: 0;
+}
+
+:only-child {
+	font-weight: bold;
+}
+
+:nth-child(2) {
+	color: green;
+}
+
+:nth-last-child(2) {
+	color: orange;
+}
+
+:first-of-type {
+	font-size: 1.2em;
+}
+
+:last-of-type {
+	font-size: 0.9em;
+}
+
+:only-of-type {
+	text-decoration: underline;
+}
+
+:nth-of-type(2) {
+	color: blue;
+}
+
+:nth-last-of-type(2) {
+	color: purple;
+}
+
+/* ===============================
+4. Linguistic & Directional
+=============================== */
+
+:lang(en) {
+	font-style: italic;
+}
+
+:dir(rtl) {
+	text-align: right;
+}
+
+/* ===============================
+5. Functional / Logical
+=============================== */
+
+:not(.active) {
+	opacity: 0.7;
+}
+
+:is(h1, h2, h3) {
+	color: var(--main-color);
+}
+
+:where(nav a) {
+	text-decoration: none;
+}
+
+:has(img) {
+	border: 2px solid green;
+}
+
+/* ===============================
+6. Targeting & Navigation
+=============================== */
+
+:target {
+	background: yellow;
+}
+
+:target-within {
+	outline: 2px solid blue;
+}
+
+:current {
+	font-weight: bold;
+}
+
+:past {
+	opacity: 0.6;
+}
+
+:future {
+	opacity: 1;
+}
+
+/* ===============================
+7. Shadow DOM / Web Components
+=============================== */
+
+:host {
+	display: block;
+}
+
+:host(.dark) {
+	background: #000;
+	color: #fff;
+}
+
+:host-context(body.dark) {
+	border-color: #333;
+}
+
+:defined {
+	visibility: visible;
+}
+
+::slotted(p) {
+	color: blue;
+}
+
+/* ===============================
+8. Media & Display State
+=============================== */
+
+:fullscreen {
+	background: black;
+}
+
+:modal {
+	border: 3px solid red;
+}
+
+:picture-in-picture {
+	border: 2px solid blue;
+}
+
+:paused {
+	opacity: 0.5;
+}
+
+:playing {
+	opacity: 1;
+}
+
+/* ===============================
+9. Page / Print
+=============================== */
+
+@page :first {
+	margin-top: 4cm;
+}
+
+@page :left {
+	margin-left: 3cm;
+}
+
+@page :right {
+	margin-right: 3cm;
+}
+
+@page :blank {
+	background: none;
+}
+
+/* ===============================
+10. Experimental / Limited
+=============================== */
+
+:state(open) {
+	background: green;
+}
+
+:current() {
+	font-weight: bold;
+}

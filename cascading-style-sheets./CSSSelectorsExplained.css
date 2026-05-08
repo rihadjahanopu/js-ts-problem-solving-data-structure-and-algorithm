@@ -1,0 +1,250 @@
+/* =====================================================
+   1. BASIC / SIMPLE SELECTORS
+===================================================== */
+
+/* Universal – সব element */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Type / Element */
+body {
+	font-family: Arial, sans-serif;
+}
+
+p {
+	color: #333;
+	line-height: 1.6;
+}
+
+/* Class */
+.btn {
+	padding: 10px 16px;
+	background: steelblue;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+/* ID */
+#header {
+	height: 60px;
+	background: #222;
+}
+
+/* Grouping */
+h1,
+h2,
+h3 {
+	font-weight: 600;
+}
+
+/* =====================================================
+   2. ATTRIBUTE SELECTORS
+===================================================== */
+
+input[required] {
+	border: 2px solid red;
+}
+
+input[type="text"] {
+	background: #f9f9f9;
+}
+
+a[href^="https"] {
+	color: green;
+}
+
+a[href$=".pdf"] {
+	color: red;
+}
+
+a[href*="login"] {
+	font-weight: bold;
+}
+
+input[type="email" i] {
+	background: #eef;
+}
+
+/* =====================================================
+   3. COMBINATORS (RELATIONSHIP)
+===================================================== */
+
+/* Descendant */
+.card p {
+	color: gray;
+}
+
+/* Child */
+ul > li {
+	list-style: none;
+}
+
+/* Adjacent Sibling */
+h2 + p {
+	margin-top: 0;
+}
+
+/* General Sibling */
+h2 ~ p {
+	color: #555;
+}
+
+/* =====================================================
+   4. PSEUDO-CLASSES
+===================================================== */
+
+/* Hover */
+button:hover {
+	background: black;
+}
+
+/* Active */
+button:active {
+	transform: scale(0.98);
+}
+
+/* Focus */
+input:focus {
+	outline: 2px solid blue;
+}
+
+/* Any link */
+a:any-link {
+	text-decoration: none;
+}
+
+/* Visited */
+a:visited {
+	color: purple;
+}
+
+/* Form states */
+button:disabled {
+	opacity: 0.5;
+}
+
+input:checked {
+	accent-color: green;
+}
+
+input:required {
+	border-color: orange;
+}
+
+input:valid {
+	border-color: green;
+}
+
+input:invalid {
+	border-color: red;
+}
+
+input:placeholder-shown {
+	background: #fafafa;
+}
+
+/* =====================================================
+   5. STRUCTURAL / POSITION
+===================================================== */
+
+li:first-child {
+	font-weight: bold;
+}
+
+li:last-child {
+	color: red;
+}
+
+li:nth-child(even) {
+	background: #eee;
+}
+
+p:empty {
+	display: none;
+}
+
+/* =====================================================
+   6. LOGICAL / MODERN
+===================================================== */
+
+button:not(.primary) {
+	background: gray;
+}
+
+:is(h1, h2, h3) {
+	color: navy;
+}
+
+:where(section) {
+	margin: 0;
+}
+
+.card:has(img) {
+	border: 2px solid green;
+}
+
+:root {
+	--main-color: teal;
+}
+
+/* =====================================================
+   7. PSEUDO-ELEMENTS
+===================================================== */
+
+h1::before {
+	content: "🔥 ";
+}
+
+a::after {
+	content: " ↗";
+}
+
+::selection {
+	background: yellow;
+	color: black;
+}
+
+input::placeholder {
+	color: #999;
+}
+
+li::marker {
+	color: red;
+}
+
+/* =====================================================
+   8. CSS NESTING (MODERN)
+===================================================== */
+
+.card {
+	padding: 16px;
+	background: #f5f5f5;
+
+	& h2 {
+		color: var(--main-color);
+	}
+
+	&:hover {
+		background: #eaeaea;
+	}
+}
+
+/* =====================================================
+   9. VENDOR SPECIFIC
+===================================================== */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-moz-selection {
+	background: orange;
+}

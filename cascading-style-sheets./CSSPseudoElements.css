@@ -1,0 +1,118 @@
+/* ======================================
+   TEXT & CONTENT PSEUDO-ELEMENTS
+====================================== */
+
+/* ::before */
+.price::before {
+	content: "৳ ";
+	color: green;
+	font-weight: bold;
+}
+
+/* ::after */
+.price::after {
+	content: " only";
+	color: gray;
+}
+
+/* ::first-letter */
+.intro::first-letter {
+	font-size: 40px;
+	color: red;
+}
+
+/* ::first-line */
+.intro::first-line {
+	font-weight: bold;
+	color: blue;
+}
+
+/* ::selection */
+::selection {
+	background: black;
+	color: white;
+}
+
+/* ::placeholder */
+input::placeholder {
+	color: gray;
+	font-style: italic;
+}
+
+/* ======================================
+   LIST & MARKER
+====================================== */
+
+li::marker {
+	color: red;
+	font-size: 18px;
+}
+
+/* ======================================
+   FORM CONTROLS
+====================================== */
+
+input::file-selector-button {
+	background: black;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+
+/* ======================================
+   MEDIA & UI PARTS
+====================================== */
+
+/* dialog backdrop */
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* video subtitles */
+::cue {
+	color: yellow;
+	background: black;
+}
+
+::cue-region {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================
+   SHADOW DOM / WEB COMPONENTS
+====================================== */
+
+::slotted(p) {
+	color: red;
+}
+
+/* ======================================
+   SCROLLBAR (Chrome / Edge)
+====================================== */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+	background: #ccc;
+}
+
+/* ======================================
+   LEGACY (still supported)
+====================================== */
+
+.legacy:before {
+	content: "OLD → ";
+	color: orange;
+}
