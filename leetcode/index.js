@@ -143,3 +143,19 @@ function processData9(input) {
 }
 
 // 08-07-2026
+
+// new problem solve for javascript dublicate number
+function processData10(input) {
+  const numbers = input.trim().split(" ").map(Number);
+  const seen = new Set();
+  let result = "";
+
+  for (let num of numbers) {
+    if (!seen.has(num)) {
+      result += num + " ";
+      seen.add(num);
+    }
+  }
+
+  console.log(result.trim());
+}
