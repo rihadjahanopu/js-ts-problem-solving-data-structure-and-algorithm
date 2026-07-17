@@ -145,7 +145,7 @@ function processData9(input) {
 // 08-07-2026
 
 // new problem solve for javascript dublicate number
-function processData10(input) {
+function processDatame(input) {
   const numbers = input.trim().split(" ").map(Number);
   const seen = new Set();
   let result = "";
