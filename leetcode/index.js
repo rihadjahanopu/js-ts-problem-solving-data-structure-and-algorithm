@@ -125,7 +125,7 @@ function processData8(input) {
     }
   }
 
-  console.log(result);
+  console.log(result, "result");
 }
 
 // You are given two big integers A and B.
